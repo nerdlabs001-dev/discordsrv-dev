@@ -59,6 +59,7 @@ public class CommandLinked {
                 sender.sendMessage(ChatColor.AQUA + LangUtil.InternalMessage.LINKED_SUCCESS.toString()
                         .replace("{name}", name)
                 );
+            DiscordSRV.getPlugin().getAccountLinkManager().save();
             } else {
                 sender.sendMessage(ChatColor.AQUA + LangUtil.InternalMessage.LINK_FAIL_NOT_ASSOCIATED_WITH_AN_ACCOUNT.toString());
             }
